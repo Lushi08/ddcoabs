@@ -1,6 +1,6 @@
 "use client";
 
-import OperatingHours from "@/app/(components)/OperatingHours";
+import OperatingHours from "@/app/(components)/(global)/OperatingHours";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -29,7 +29,7 @@ const LoginUser = () => {
       }
 
       router.refresh();
-      router.push("../dashboard");
+      router.push("/dashboard");
     } catch (error) {
       console.log(error);
     }
@@ -114,7 +114,7 @@ const LoginUser = () => {
         </div>
       </div>
       <div className="lg:w-1/2 xl:p-20 lg:p-15 p-10 text-white border-opacity-20">
-        <OperatingHours />
+        <OperatingHours/>
       </div>
     </div>
   );

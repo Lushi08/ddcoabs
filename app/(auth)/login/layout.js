@@ -1,16 +1,16 @@
 import React from "react";
-import { Inter } from "next/font/google";
 import Footer from "@/app/(components)/(global)/Footer";
+import { Inter } from "next/font/google";
 import Navbar from "@/app/(components)/(global)/Nav";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Sign Up | DDC-OABS",
-  description: "Registration Page",
+  title: "Log In | DDC-OABS",
+  description: "Login Page",
 };
 
-const RegisterLayout = ({ children }) => {
+const LoginLayout = ({ children }) => {
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -26,4 +26,4 @@ const RegisterLayout = ({ children }) => {
   );
 };
 
-export default RegisterLayout;
+export default LoginLayout;

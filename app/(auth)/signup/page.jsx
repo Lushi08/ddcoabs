@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import OperatingHours from '@/app/(components)/OperatingHours'
+import OperatingHours from '@/app/(components)/(global)/OperatingHours'
 import { useRouter } from 'next/navigation'
 
 const Signup = () => {

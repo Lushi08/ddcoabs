@@ -3,30 +3,15 @@ import Link from 'next/link'
 import Image from 'next/image'
 import React, { useState } from 'react'
 
-function Navbar() {
+const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false);
 
     const links = [
         {
             id: 1,
             title: "Home",
-            url: "/dashboard",
-        },
-        {
-            id: 2,
-            title: "Profile",
-            url: "/profile",
-        },
-        {
-            id: 3,
-            title: "Services",
-            url: "/clinicservices",
-        },
-        {
-            id: 4,
-            title: "Appointments",
-            url: "/appointments",
-        },
+            url: "/",
+        }
     ]
 
     const toggleMenu = () => {
@@ -56,11 +41,7 @@ function Navbar() {
                     <Link key={link.id} href={link.url} className='text-slate-300 hover:text-white'>{link.title}</Link>
                 ))}
                 <Link href="/appointments" className='text-blue-700 bg-slate-50 px-2 rounded-full hover:text-blue-700'>Book Now</Link>
-                <button onClick={() => { console.log("logged out") }} className='text-slate-300 hover:text-white'>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
-                </svg>
-            </button>
+                
             </div>
         </div>
     )

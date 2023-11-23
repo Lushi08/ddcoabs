@@ -1,6 +1,6 @@
 import React from 'react'
 
-function OperatingHours() {
+const OperatingHours = () => {
   return (
     <div className='w-full overflow-x-hidden'>
       {/* <h1 className='text-inherit font-bold md:text-2xl text-xl'>Operating Hours</h1> */}
