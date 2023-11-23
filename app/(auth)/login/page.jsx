@@ -28,8 +28,8 @@ const LoginUser = () => {
         return;
       }
 
-      router.refresh();
-      router.push("/dashboard");
+      // router.refresh();
+      // router.push("/dashboard");
     } catch (error) {
       console.log(error);
     }
@@ -50,16 +50,16 @@ const LoginUser = () => {
         </div>
         {/* login form */}
         <div className="py-5 px-8">
-          <form className="" onSubmit={handleSubmit}>
+          <form className="" onSubmit={handleSubmit} method = "POST">
             <div className="mb-4">
               <label
                 for=""
-                className="flex gap-2 items-center font-semibold text-gray-400 text-sm"
-              >
+                className="flex gap-2 items-center font-semibold text-gray-400 text-sm">
                 Email Address
               </label>
               <input
                 type="email"
+                name = "email"
                 className="focus:outline-blue-700 mb-3 mt-2 border border-slate-300 w-full bg-transparent py-2 px-3 rounded-md text-sm placeholder:text-slate-400"
                 placeholder="Enter your email address"
                 onChange={(e) => setEmail(e.target.value)}
@@ -68,12 +68,12 @@ const LoginUser = () => {
 
               <label
                 for=""
-                className="flex gap-2 items-center font-semibold text-gray-400 text-sm"
-              >
+                className="flex gap-2 items-center font-semibold text-gray-400 text-sm">
                 Password
               </label>
               <input
                 type="password"
+                name = "password"
                 className="focus:outline-blue-700  mb-3 mt-1 border border-slate-300 w-full bg-transparent py-2 px-3 rounded-md text-sm placeholder:text-slate-400"
                 placeholder="Enter your password"
                 onChange={(e) => setPassword(e.target.value)}
@@ -91,8 +91,7 @@ const LoginUser = () => {
 
               {error && (
                 <p className="flex gap-2 items-center font-semibold text-red-400 text-sm">
-                  {" "}
-                  {error}{" "}
+                  {error}
                 </p>
               )}
               <input
